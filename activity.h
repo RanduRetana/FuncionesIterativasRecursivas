@@ -1,8 +1,8 @@
 // =================================================================
 //
 // File: activity.h
-// Author:
-// Date:
+// Author: Marco Randu Retana Vargas
+// Date: 27/08/2022
 //
 // =================================================================
 #ifndef ACTIVITY_H
@@ -17,7 +17,11 @@
 // @Complexity	??
 // =================================================================
 unsigned int sumaIterativa(unsigned int n) {
-	return 0;
+	int suma;
+	for(int i=1; i<=n; i++){
+		suma=suma+i;
+	}
+	return suma;
 }
 
 // =================================================================
@@ -29,7 +33,8 @@ unsigned int sumaIterativa(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaRecursiva(unsigned int n) {
-	return 0;
+	if(n<=1) return 1;
+	return n + sumaRecursiva(n-1);
 }
 
 // =================================================================
@@ -41,7 +46,7 @@ unsigned int sumaRecursiva(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaDirecta(unsigned int n) {
-	return 0;
+	return (n*(n+1))/2;
 }
 
 #endif /* ACTIVITY_H */
